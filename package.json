@@ -18,7 +18,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "lint": "eslint \"./src/**/*.ts\"",
+    "build": "cross-env DISABLE_ESLINT_PLUGIN=true react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -42,6 +43,8 @@
   },
   "devDependencies": {
     "@itwin/eslint-plugin": "^3.3.4",
-    "eslint": "^8.23.1"
+    "@rushstack/eslint-patch": "^1.2.0",
+    "cross-env": "^5.1.4",
+    "eslint": "^7.0.0"
   }
 }
